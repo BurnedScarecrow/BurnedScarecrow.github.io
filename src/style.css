@@ -13,6 +13,16 @@
   src: url(./assets/fonts/Jost-Regular.ttf);
 }
 
+@font-face {
+  font-family: Jura;
+  src: url(./assets/fonts/Jura-Regular.ttf);
+}
+
+@font-face {
+  font-family: MsMadi;
+  src: url(./assets/fonts/MsMadi-Regular.ttf);
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                Common styles                               */
 /* -------------------------------------------------------------------------- */
@@ -36,10 +46,19 @@
 
   --text: #fafafa;
   --bg:  #242424;
+  --accent: #ff8c00;
+}
+
+.space{
+  display: block;
+  width: 100%;
+  height: 2em;
 }
 
 .container{
   box-sizing: border-box;
+  padding: 0 1em;
+
 }
 
 a {
@@ -93,6 +112,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.handwriting{
+  font-family: 'MsMadi';
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -110,26 +133,32 @@ button:focus-visible {
 /*                                Media Queries                               */
 /* -------------------------------------------------------------------------- */
 
-/* Min-width: 320px (smaller phone viewpoints) */
-@media only screen and (min-device-width: 320px) {
+@media only screen and (max-width: 768px){
+
   .container {
-    width: 1200px;
-    /* border:1px solid#fafafa; */
+    width: 90vw;
   }
 }
 
-/* Min-width: 480px (small devices and most phones) */
-@media only screen and (min-device-width: 480px) {
-}
+
 
 /* Min-width: 768px (most tablets) */
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
 }
 
 /* Min-width: 992px (smaller desktop viewpoints) */
-@media only screen and (min-device-width: 992px) {
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 900px;
+  }
 }
 
 /* Min-width: 1200px (large devices and wide screens */
-@media only screen and (min-device-width: 1200px) {
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
