@@ -1,33 +1,30 @@
 <script setup>
-import { onMounted, reactive} from 'vue'
-import NavIcon from './svg/NavIcon.vue';
-import CloseIcon from './svg/CloseIcon.vue';
+import { onMounted, reactive } from "vue";
+import NavIcon from "./svg/NavIcon.vue";
+import CloseIcon from "./svg/CloseIcon.vue";
 
 const state = reactive({
   hide_nav: true,
-  toggler_text: "NAVIGATIOn"
+  toggler_text: "NAVIGATIOn",
 });
 
 const toggleNav = () => {
-  state.hide_nav = !state.hide_nav
-  const topline = document.getElementById("topline")
-  const nav = document.getElementsByTagName("nav")[0]
-  if(state.hide_nav == false){
+  state.hide_nav = !state.hide_nav;
+  const topline = document.getElementById("topline");
+  const nav = document.getElementsByTagName("nav")[0];
+  if (state.hide_nav == false) {
     nav.style.display = "flex";
     topline.style.background = "#121212dd";
-  }else{
+  } else {
     nav.style.display = "none";
     topline.style.background = "transparent";
   }
-}
-    
-    
+};
 
-
-window.addEventListener('scroll', onScroll);
+window.addEventListener("scroll", onScroll);
 function onScroll() {
   const scrollTop = window.pageYOffset;
-  if (scrollTop > 20){  
+  if (scrollTop > 20) {
     document.getElementById("topline").style.background = "#121212";
   } else {
     document.getElementById("topline").style.background = "transparent";
@@ -38,19 +35,17 @@ function onScroll() {
 <template>
   <div id="topline">
     <div class="topline-content container">
-      <h2 class="logo">
-        Cawa
-      </h2>
-      <nav :class="{'hidden': hide_nav}">
+      <h2 class="logo">Cawa</h2>
+      <nav :class="{ hidden: hide_nav }">
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Experiebce</a>
-        <a href="#">Skills</a>
-        <a href="#">Contact me</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact me</a>
       </nav>
       <div id="nav-toggler" @click="toggleNav">
-        <CloseIcon :class="{'faded':state.hide_nav}"></CloseIcon>
-        <NavIcon :class="{'faded':!state.hide_nav}"></NavIcon>
+        <CloseIcon :class="{ faded: state.hide_nav }"></CloseIcon>
+        <NavIcon :class="{ faded: !state.hide_nav }"></NavIcon>
       </div>
     </div>
   </div>
@@ -59,32 +54,36 @@ function onScroll() {
 </template>
 
 <style scoped lang="scss">
-
-#topline{
+#topline {
   display: flex;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   justify-content: center;
   height: 4em;
   width: 100vw;
   transition: background 0.3s ease;
-  // border: 1px solid #fff;
 }
 
-.topline-content{
+.topline-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo{
+.logo {
   font-family: "HachiMaru";
   padding: 0.5em 0;
   margin: 0;
+  color: var(--text);
+  cursor: pointer;
+  &:hover {
+    color: var(--accent);
+    transition: color 0.2s ease;
+  }
 }
 
-nav{
+nav {
   font-family: "Jost";
   font-weight: 900;
   display: flex;
@@ -92,14 +91,14 @@ nav{
   flex-direction: column;
   position: fixed;
   top: 4em;
-  left :0;
+  left: 0;
   width: 100vw;
   min-height: 100vh;
   background: #121212dd;
   justify-content: center;
   align-items: center;
 
-  &.hidden{
+  &.hidden {
     display: none !important;
   }
 
@@ -110,7 +109,7 @@ nav{
     transition: all 0.1s ease-in;
     // border:1px solid #fff
 
-    &:hover{
+    &:hover {
       transform: scale(1.2);
       color: var(--accent);
       // color: #00a3c0;
@@ -122,26 +121,23 @@ nav{
   display: flex;
   position: relative;
   cursor: pointer;
-  
-  .faded{
+
+  .faded {
     position: absolute;
     opacity: 0;
   }
 }
 
-a{
+a {
   text-transform: uppercase;
-  color:#fafafa;
- 
-
+  color: #fafafa;
 }
 
 /* Min-width: 320px (smaller phone viewpoints) */
 @media only screen and (min-width: 320px) {
- nav{
+  nav {
     display: none;
-
- }
+  }
 }
 
 /* Min-width: 480px (small devices and most phones) */
@@ -150,7 +146,6 @@ a{
 
 /* Min-width: 768px (most tablets) */
 @media only screen and (min-width: 768px) {
- 
 }
 
 /* Min-width: 992px (smaller desktop viewpoints) */
@@ -158,7 +153,7 @@ a{
   #nav-toggler {
     display: none;
   }
-  nav{
+  nav {
     display: flex !important;
     font-weight: 900;
     gap: 1em;
@@ -169,12 +164,12 @@ a{
     padding: 0;
     background: none;
     top: 0;
-    &.hidden{
-    display: none !important;
-  }
+    &.hidden {
+      display: none !important;
+    }
 
-    a{
-      &:hover{
+    a {
+      &:hover {
         transform: scale(1);
       }
     }
@@ -183,7 +178,5 @@ a{
 
 /* Min-width: 1200px (large devices and wide screens */
 @media only screen and (min-width: 1200px) {
-
 }
-
 </style>

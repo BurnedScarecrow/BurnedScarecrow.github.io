@@ -1,18 +1,23 @@
 <script setup>
 (function () {
+  console.log(
+    (document.body.getBoundingClientRect().width / 100) *
+      (document.body.getBoundingClientRect().height / 100) *
+      0.2
+  );
   let canvas = document.createElement("canvas"), //создаю эл-т canvas
     ctx = canvas.getContext("2d"), // генерирую контекст рисования
-    w = (canvas.width = innerWidth),
-    h = (canvas.height = innerHeight),
+    w = (canvas.width = document.body.getBoundingClientRect().width),
+    h = (canvas.height = document.body.getBoundingClientRect().height),
     particles = [], // массив частиц
     properties = {
       bgColor: "#242424",
       particleColor: "#fafafa",
       particleRadius: 3, // радиус частицы
-      particleCount: 40,
+      particleCount: ((w / 150) * (h / 150)) % 40,
       particleMaxVelocity: 0.7, // скорость(исп. для генерации скорости по х и у)
-      lineLength: 170,
-      particleLife: 10 //жизненный цикл частичек(в сек)
+      lineLength: w > h ? w / 10 : h / 10,
+      particleLife: 10, //жизненный цикл частичек(в сек)
     };
   document.querySelector("body").appendChild(canvas);
 
@@ -26,12 +31,8 @@
     constructor() {
       this.x = Math.random() * w;
       this.y = Math.random() * h;
-      this.velocityX =
-        Math.random() * (properties.particleMaxVelocity * 2) -
-        properties.particleMaxVelocity; // ~ -0,5 до +0,5. От этого зависит в каком направлении будет двигатсься частичка
-      this.velocityY =
-        Math.random() * (properties.particleMaxVelocity * 2) -
-        properties.particleMaxVelocity;
+      this.velocityX = Math.random() * (properties.particleMaxVelocity * 2) - properties.particleMaxVelocity; // ~ -0,5 до +0,5. От этого зависит в каком направлении будет двигатсься частичка
+      this.velocityY = Math.random() * (properties.particleMaxVelocity * 2) - properties.particleMaxVelocity;
       this.life = Math.random() * properties.particleLife * 60; // 60 кол-во кадров в секунду
     }
     // метод обновляющий позицию
@@ -63,11 +64,9 @@
         this.x = Math.random() * w;
         this.y = Math.random() * h;
         this.velocityX =
-          Math.random() * (properties.particleMaxVelocity * 2) -
-          properties.particleMaxVelocity; // ~ -0,5 до +0,5. От этого зависит в каком направлении будет двигатсься частичка
+          Math.random() * (properties.particleMaxVelocity * 2) - properties.particleMaxVelocity; // ~ -0,5 до +0,5. От этого зависит в каком направлении будет двигатсься частичка
         this.velocityY =
-          Math.random() * (properties.particleMaxVelocity * 2) -
-          properties.particleMaxVelocity;
+          Math.random() * (properties.particleMaxVelocity * 2) - properties.particleMaxVelocity;
         this.life = Math.random() * properties.particleLife * 60;
       }
       this.life--;
@@ -133,19 +132,16 @@
 
   init();
 })();
-
-
 </script>
 
-<template>
-</template>
+<template></template>
 
 <style lang="scss">
-canvas{
+canvas {
   position: absolute;
-  top:0;
-  left:0;
-  z-index:-1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
 }
-
 </style>
