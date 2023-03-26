@@ -27,13 +27,13 @@ const count = ref(0);
     <div class="socials">
       <h2>Download Resume</h2>
       <div class="resume_buttons">
-        <a href="../../public/Resume-Alexander-Evsikov-ru.pdf">
+        <a href="../../Resume-Alexander-Evsikov-ru.pdf">
           <h2>
             <img src="../assets/download-svgrepo-com.svg" alt="" />
             RU
           </h2>
         </a>
-        <a href="../../public/Resume-Alexander-Evsikov-en.pdf">
+        <a href="../../Resume-Alexander-Evsikov-en.pdf">
           <h2>
             <img src="../assets/download-svgrepo-com.svg" alt="" />
             EN
