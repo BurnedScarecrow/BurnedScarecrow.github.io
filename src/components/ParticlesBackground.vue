@@ -1,10 +1,5 @@
 <script setup>
 (function () {
-  console.log(
-    (document.body.getBoundingClientRect().width / 100) *
-      (document.body.getBoundingClientRect().height / 100) *
-      0.2
-  );
   let canvas = document.createElement("canvas"), //создаю эл-т canvas
     ctx = canvas.getContext("2d"), // генерирую контекст рисования
     w = (canvas.width = document.body.getBoundingClientRect().width),
@@ -14,7 +9,7 @@
       bgColor: "#242424",
       particleColor: "#fafafa",
       particleRadius: 3, // радиус частицы
-      particleCount: ((w / 150) * (h / 150)) % 40,
+      particleCount: (w / 150) * (h / 150) > 40 ? 40 : (w / 150) * (h / 150),
       particleMaxVelocity: 0.7, // скорость(исп. для генерации скорости по х и у)
       lineLength: w > h ? w / 10 : h / 10,
       particleLife: 10, //жизненный цикл частичек(в сек)
