@@ -1,6 +1,8 @@
 <script setup>
 import AboutComponent from "./components/AboutComponent.vue";
+import ExperienceComponent from "./components/ExperienceComponent.vue";
 import HomeComponent from "./components/HomeComponent.vue";
+import SkillsComponent from "./components/SkillsComponent.vue";
 import TopLine from "./components/TopLine.vue";
 </script>
 
@@ -9,11 +11,17 @@ import TopLine from "./components/TopLine.vue";
     <TopLine></TopLine>
     <HomeComponent></HomeComponent>
     <AboutComponent></AboutComponent>
-    <!-- <HelloWorld msg="Vite + Vue" />
-      <HelloWorld msg="Vite + Vue" />
-      <HelloWorld msg="Vite + Vue" />
-      <HelloWorld msg="Vite + Vue" />
-      <HelloWorld msg="Vite + Vue" /> -->
+    <SkillsComponent></SkillsComponent>
+    <ExperienceComponent></ExperienceComponent>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
   </div>
 </template>
 

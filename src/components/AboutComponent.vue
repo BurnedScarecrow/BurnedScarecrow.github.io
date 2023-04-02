@@ -10,6 +10,7 @@ const lang = ref("en");
         About me
         <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span>
       </h2>
+      <div class="space"></div>
       <div class="section-content">
         <p v-show="lang == 'ru'">
           Как разработчик с <span class="accent">3-летним профессиональным опытом</span>, я увлечен
@@ -18,6 +19,7 @@ const lang = ref("en");
           <span class="accent">Backend и Frontend</span>, так и специфичные, например информационная
           безопасность и реверс-инжиниринг.
         </p>
+
         <p v-show="lang == 'ru'">
           Сейчас я <span class="accent">работаю над дипломной работой</span> о методах обхода блокировок
           интернет-ресурсов и интернет-цензуры путем проксирования, туннелирования и обфускации трафика, так
@@ -68,8 +70,10 @@ const lang = ref("en");
 <style scoped lang="scss">
 #about {
   margin-top: -1px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  box-sizing: border-box;
   background: var(--bg);
-  min-height: calc(100vh - 4em);
   flex-direction: column;
   justify-content: center;
   width: 100vw;
@@ -85,6 +89,13 @@ const lang = ref("en");
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 7px 10px 5px 0px rgba(0, 0, 0, 0.4);
   }
+
+  .wave {
+    margin: 0;
+    padding: 0;
+    margin-bottom: -6px;
+    box-sizing: border-box !important;
+  }
 }
 
 /* Min-width: 320px (smaller phone viewpoints) */
@@ -97,6 +108,7 @@ const lang = ref("en");
     p {
       width: 100%;
       font-size: 1em;
+      margin-bottom: 2em;
     }
   }
 }
@@ -109,6 +121,7 @@ const lang = ref("en");
     p {
       width: 100%;
       font-size: 1em;
+      margin-bottom: 2em;
     }
   }
 }
@@ -121,6 +134,7 @@ const lang = ref("en");
     }
     p {
       width: 100%;
+      margin-bottom: 2em;
     }
   }
 }
