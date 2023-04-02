@@ -4,31 +4,120 @@ const lang = ref("en");
 </script>
 
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path
-      fill="#fafafa"
-      fill-opacity="1"
-      d="M0,64L60,64C120,64,240,64,360,74.7C480,85,600,107,720,144C840,181,960,235,1080,245.3C1200,256,1320,224,1380,208L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
-    ></path>
-  </svg>
   <section id="experience">
-    <div class="container">
+    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#fafafa" fill-opacity="1" d="M0,192L720,32L1440,160L1440,0L720,0L0,0Z"></path>
+    </svg>
+    <div class="left">
       <h2 class="section-header">
-        <!-- Experience -->
-        <!-- <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span> -->
+        Experience
+        <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span>
       </h2>
+      <div class="work-title">
+        <h2>Frontend Developer</h2>
+        <h3>Freelance</h3>
+        <h3>2018</h3>
+      </div>
+      <div class="work-title">
+        <h2>Fllstack Developer</h2>
+        <h3>Freelance</h3>
+        <h3>2019</h3>
+      </div>
+      <div class="work-title">
+        <h2>Data Engineer</h2>
+        <h3>St. Petersburg Electrotechnical University</h3>
+        <h3>2020</h3>
+      </div>
+      <div class="work-title">
+        <h2>Web Developer</h2>
+        <h3>ProCSy</h3>
+        <h3>March 2022</h3>
+      </div>
+      <div class="work-title">
+        <h2>QA Engineer</h2>
+        <h3>ProCSy</h3>
+        <h3>June 2022</h3>
+      </div>
+      <div class="work-title">
+        <h2>Backend Engineer</h2>
+        <h3>Comfortel</h3>
+        <h3>September 2022</h3>
+      </div>
+    </div>
+    <div class="right">
+      <div class="section-header"></div>
+      <div class="work-info">
+        <p>
+          <i>Responsibilities:</i>
+          Developing a web pages using Vue JS. Fixing bugs of the layout. Connecting frontend to backend using
+          REST API. Use the concept of a SPA to implement a selling service. Deploy web-sites to AWS.
+        </p>
+        <p>
+          <i>Used skills:</i> HTML · CSS · SASS · Figma · Single Page Applications · Amazon Web Services (AWS)
+          · Nginx · VueJS · Linux · Bash
+        </p>
+      </div>
+      <div class="work-info">
+        <p>
+          <i>Responsibilities:</i> Developing a web application on the Mongo Express Vue Node stack. Creation
+          of a server-side CRUD application. Implement SPA for selling services. Using AWS and Docker to
+          Deploy a Microservice Application.
+        </p>
+        <p>
+          <i>Used skills:</i> Express.js · Django · HTML · CSS · SASS · Docker · Figma · SPA · AWS · Nginx ·
+          VueJS · NuxtJS · NodeJS · Python · TypeScript · NestJS · JavaScript · Linux · Bash
+        </p>
+      </div>
+      <div class="work-info">
+        <p>
+          <i>Responsibilities:</i> Create datasets from logs raw data. Modify datasets by adding new metrics.
+          Creating models for Mashine Learning (ML). Implement predictive models. Use Markov's model for user
+          actions prediction in the application.
+        </p>
+        <p>
+          <i>Used skills:</i> ExpressJS · Django · ML · Python · Pandas · Catboost · SciKit Learn · Math
+          Statistics · Scientific research
+        </p>
+      </div>
+      <div class="work-info">
+        <p><i>Responsibilities: </i> Design and development of a fintech web application. Testing.</p>
+        <p>
+          <i>Used skills:</i> Javascript · TypeScript · Jest · NestJS · NuxtJS · VueJS · Vuex · Axios · Figma
+        </p>
+      </div>
+      <div class="work-info">
+        <p>
+          <i>Responsibilities:</i> Testing high performance crypto-network for transactions. Write E2E tests
+          and integration tests
+        </p>
+        <p><i>Used skills:</i> JavaScript · Jest · E2E Tests · Integration tests</p>
+      </div>
+      <div class="work-info">
+        <p>
+          <i>Responsibilities:</i> Backend engineer with speciality in restfull APIs, network security and
+          backend development. Implementing and testing server side part of smart home and IoT management
+          application. Implementing microservice architecture with Nest.js, Keycloak, Kafka, HTTP and MQTT.
+        </p>
+        <p>
+          <i>Used skills:</i> Internet of Things (IoT) · Smart Home Technology · Jenkins · Mongoose · NodeJS ·
+          Python · Apache Kafka · TypeScript · Jest · MongoDB · Open API · GitHub · Microservices · MQTT ·
+          NestJS · Network Security · Swagger
+        </p>
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped lang="scss">
 #experience {
-  margin-top: -20px;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+  display: flex;
   width: 100vw;
   color: var(--text);
-  padding-bottom: 100px;
+  .wave {
+    position: absolute;
+    top: 0;
+  }
 
   .lang {
     border-color: var(--text) !important;
@@ -39,52 +128,63 @@ const lang = ref("en");
   }
 
   p {
-    font-family: "Jura";
-    text-align: justify;
+    font-family: "Jost";
     font-size: 1.2em;
-    border-radius: 0.3em;
-    box-sizing: border-box;
-    padding: 1em;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 7px 10px 5px 0px rgba(0, 0, 0, 0.4);
+    i {
+      font-family: "Jura";
+    }
   }
 
-  .experience-section {
-    h2 {
-      font: 1.7em "Jura";
+  .left,
+  .right {
+    width: 50%;
+    .section-header {
+      z-index: 1;
+      height: 200px;
     }
-    .experience-list {
-      font-family: "Jost";
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 200px 100px;
+    align-items: end;
+
+    .work-title {
       display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      gap: 1em;
-      margin-top: 1em;
+      flex-direction: column;
+      justify-content: start;
+      align-items: end;
+      height: 200px;
+      margin: 10px 0;
 
-      .skill {
-        color: var(--bg);
-        display: flex;
-        align-items: center;
-        background: #fff;
-        font-size: 1.3em;
-        box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 20px;
-        padding: 0 1em;
-        height: 40px;
-        gap: 0.4em;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        border: 1px solid transparent;
-        box-sizing: border-box;
-        &:hover {
-          transform: scale(1.05);
-          border: 1px solid var(--accent);
-        }
+      h2 {
+        font: 2em "Jost";
+      }
+      h3 {
+        font: 1.4em "Jura";
+      }
+    }
+  }
+  .right {
+    background: var(--text);
+    display: flex;
+    flex-direction: column;
+    padding: 200px 100px;
+    color: var(--bg);
 
-        img {
-          height: 1em;
-        }
+    .work-info {
+      display: flex;
+      width: 70%;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      height: 200px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      padding: 10px 0;
+      p {
+        margin-bottom: 10px;
       }
     }
   }
@@ -101,14 +201,6 @@ const lang = ref("en");
       width: 100%;
       font-size: 1em;
     }
-    .experience-section {
-      h2 {
-        font: 1em "Jura";
-      }
-      .experience-list {
-        font-size: 0.7rem;
-      }
-    }
   }
 }
 /* Min-width: 320px (smaller phone viewpoints) */
@@ -120,15 +212,6 @@ const lang = ref("en");
     p {
       width: 100%;
       font-size: 1em;
-    }
-
-    .experience-section {
-      h2 {
-        font: 1.2em "Jura";
-      }
-      .experience-list {
-        font-size: 0.7rem;
-      }
     }
   }
 }
@@ -142,28 +225,14 @@ const lang = ref("en");
     p {
       width: 100%;
     }
-
-    .experience-section {
-      .experience-list {
-        font-size: 0.8rem;
-      }
-    }
   }
 }
 
 /* Min-width: 768px (most tablets) */
 @media only screen and (min-width: 768px) {
   #experience {
-    .wave {
-      margin-top: -100px;
-    }
     h2 {
       font-size: 2em;
-    }
-    .experience-section {
-      .experience-list {
-        font-size: 1rem;
-      }
     }
   }
 }

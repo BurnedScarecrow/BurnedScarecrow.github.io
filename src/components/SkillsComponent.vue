@@ -171,7 +171,7 @@
   justify-content: center;
   width: 100vw;
   color: var(--bg);
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 
   .lang {
     border-color: var(--bg) !important;

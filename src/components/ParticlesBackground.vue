@@ -11,7 +11,7 @@
       particleRadius: 3, // радиус частицы
       particleCount: (w / 150) * (h / 150) > 40 ? 40 : (w / 150) * (h / 150),
       particleMaxVelocity: 0.7, // скорость(исп. для генерации скорости по х и у)
-      lineLength: w > h ? w / 10 : h / 10,
+      lineLength: w > h ? w / 10 : h / 6,
       particleLife: 10, //жизненный цикл частичек(в сек)
     };
   document.querySelector("body").appendChild(canvas);

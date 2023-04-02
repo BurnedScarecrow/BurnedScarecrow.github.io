@@ -63,6 +63,7 @@ function onScroll() {
   height: 4em;
   width: 100vw;
   transition: background 0.3s ease;
+  z-index: 99;
 }
 
 .topline-content {
@@ -87,7 +88,6 @@ nav {
   font-family: "Jost";
   font-weight: 900;
   display: flex;
-  // display: none;
   flex-direction: column;
   position: fixed;
   top: 4em;
@@ -107,12 +107,10 @@ nav {
     display: flex;
     width: fit-content;
     transition: all 0.1s ease-in;
-    // border:1px solid #fff
 
     &:hover {
       transform: scale(1.2);
       color: var(--accent);
-      // color: #00a3c0;
     }
   }
 }
