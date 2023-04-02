@@ -25,7 +25,7 @@ const lang = ref("en");
       </div>
       <div class="work-title">
         <h2>Data Engineer</h2>
-        <h3>St. Petersburg Electrotechnical University</h3>
+        <h3>St. Petersburg ETU "LETI"</h3>
         <h3>2020</h3>
       </div>
       <div class="work-title">
@@ -88,7 +88,7 @@ const lang = ref("en");
       <div class="work-info">
         <p>
           <i>Responsibilities:</i> Testing high performance crypto-network for transactions. Write E2E tests
-          and integration tests
+          and integration tests.
         </p>
         <p><i>Used skills:</i> JavaScript · Jest · E2E Tests · Integration tests</p>
       </div>
@@ -96,12 +96,11 @@ const lang = ref("en");
         <p>
           <i>Responsibilities:</i> Backend engineer with speciality in restfull APIs, network security and
           backend development. Implementing and testing server side part of smart home and IoT management
-          application. Implementing microservice architecture with Nest.js, Keycloak, Kafka, HTTP and MQTT.
+          application. Implementing microservice architecture with Nest.js, Kafka, HTTP and MQTT.
         </p>
         <p>
-          <i>Used skills:</i> Internet of Things (IoT) · Smart Home Technology · Jenkins · Mongoose · NodeJS ·
-          Python · Apache Kafka · TypeScript · Jest · MongoDB · Open API · GitHub · Microservices · MQTT ·
-          NestJS · Network Security · Swagger
+          <i>Used skills:</i> IoT · Smart Home · Jenkins · NodeJS · Python · Apache Kafka · TypeScript · Jest
+          · MongoDB · Open API · Microservices · MQTT · NestJS · Network Security
         </p>
       </div>
     </div>
@@ -159,10 +158,11 @@ const lang = ref("en");
       margin: 10px 0;
 
       h2 {
-        font: 2em "Jost";
+        color: var(--accent);
+        font: 1.5em "Jost";
       }
       h3 {
-        font: 1.4em "Jura";
+        font: 1.3em "Jura";
       }
     }
   }
@@ -201,10 +201,20 @@ const lang = ref("en");
       width: 100%;
       font-size: 1em;
     }
+
+    .left,
+    .right {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      p {
+        width: 100%;
+      }
+    }
   }
 }
 /* Min-width: 320px (smaller phone viewpoints) */
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 1200px) {
   #experience {
     h2 {
       font-size: 1.5em;
@@ -212,6 +222,41 @@ const lang = ref("en");
     p {
       width: 100%;
       font-size: 1em;
+    }
+
+    .left,
+    .right {
+      width: 100%;
+      position: absolute;
+      background: transparent;
+      padding: 0 10%;
+
+      .section-header {
+        align-self: start;
+      }
+
+      .work-title {
+        height: 110px;
+        margin-bottom: 340px;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 0.5em 1em;
+        border-radius: 7px;
+        backdrop-filter: blur(10px);
+      }
+
+      .work-info {
+        width: 100%;
+        height: 320px;
+        margin-top: 130px;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 1em;
+        border-radius: 7px;
+        backdrop-filter: blur(10px);
+        p {
+          text-align: justify;
+          color: var(--text);
+        }
+      }
     }
   }
 }
@@ -242,9 +287,6 @@ const lang = ref("en");
   #experience {
     h2 {
       font-size: 2.5em;
-    }
-    p {
-      width: 80%;
     }
   }
 }
