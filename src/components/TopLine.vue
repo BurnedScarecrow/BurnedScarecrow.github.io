@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, reactive } from "vue";
+import { reactive } from "vue";
 import NavIcon from "./svg/NavIcon.vue";
 import CloseIcon from "./svg/CloseIcon.vue";
 
@@ -41,7 +41,7 @@ function onScroll() {
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#contact">Contact me</a>
+        <a href="#contacts">Contact me</a>
       </nav>
       <div id="nav-toggler" @click="toggleNav">
         <CloseIcon :class="{ faded: state.hide_nav }"></CloseIcon>

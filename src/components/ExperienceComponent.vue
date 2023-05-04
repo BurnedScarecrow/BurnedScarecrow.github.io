@@ -8,7 +8,6 @@ const lang = ref("en");
     <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#fafafa" fill-opacity="1" d="M0,192L720,32L1440,160L1440,0L720,0L0,0Z"></path>
     </svg>
-
     <h2 class="section-header">
       Experience
       <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span>
@@ -118,6 +117,13 @@ const lang = ref("en");
       </div>
     </div>
   </section>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path
+      fill="#fafafa"
+      fill-opacity="1"
+      d="M0,192L120,202.7C240,213,480,235,720,250.7C960,267,1200,277,1320,282.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+    ></path>
+  </svg>
 </template>
 
 <style scoped lang="scss">
@@ -194,6 +200,7 @@ const lang = ref("en");
     .experience_content {
       display: flex;
       flex-direction: column;
+      gap: 20px;
       .work-title {
         align-items: start;
       }
@@ -215,6 +222,10 @@ const lang = ref("en");
     .experience_content {
       display: flex;
       flex-direction: column;
+      width: 90%;
+      margin: 0 auto;
+      gap: 20px;
+
       .work-title {
         align-items: start;
         width: 100%;

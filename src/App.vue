@@ -1,5 +1,6 @@
 <script setup>
 import AboutComponent from "./components/AboutComponent.vue";
+import ContactsComponent from "./components/ContactsComponent.vue";
 import ExperienceComponent from "./components/ExperienceComponent.vue";
 import HomeComponent from "./components/HomeComponent.vue";
 import SkillsComponent from "./components/SkillsComponent.vue";
@@ -13,15 +14,7 @@ import TopLine from "./components/TopLine.vue";
     <AboutComponent></AboutComponent>
     <SkillsComponent></SkillsComponent>
     <ExperienceComponent></ExperienceComponent>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
+    <ContactsComponent></ContactsComponent>
   </div>
 </template>
 
