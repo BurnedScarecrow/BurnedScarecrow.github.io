@@ -10,7 +10,7 @@ const lang = ref("en");
     </svg>
     <h2 class="section-header">
       Experience
-      <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span>
+      <!-- <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span> -->
     </h2>
 
     <div class="experience_content">
