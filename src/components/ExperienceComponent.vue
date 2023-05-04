@@ -4,48 +4,22 @@ const lang = ref("en");
 </script>
 
 <template>
-  <section id="experience">
+  <section id="experience" class="container">
     <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#fafafa" fill-opacity="1" d="M0,192L720,32L1440,160L1440,0L720,0L0,0Z"></path>
     </svg>
-    <div class="left">
-      <h2 class="section-header">
-        Experience
-        <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span>
-      </h2>
+
+    <h2 class="section-header">
+      Experience
+      <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span>
+    </h2>
+
+    <div class="experience_content">
       <div class="work-title">
         <h2>Frontend Developer</h2>
         <h3>Freelance</h3>
         <h3>2018</h3>
       </div>
-      <div class="work-title">
-        <h2>Fllstack Developer</h2>
-        <h3>Freelance</h3>
-        <h3>2019</h3>
-      </div>
-      <div class="work-title">
-        <h2>Data Engineer</h2>
-        <h3>St. Petersburg ETU "LETI"</h3>
-        <h3>2020</h3>
-      </div>
-      <div class="work-title">
-        <h2>Web Developer</h2>
-        <h3>ProCSy</h3>
-        <h3>March 2022</h3>
-      </div>
-      <div class="work-title">
-        <h2>QA Engineer</h2>
-        <h3>ProCSy</h3>
-        <h3>June 2022</h3>
-      </div>
-      <div class="work-title">
-        <h2>Backend Engineer</h2>
-        <h3>Comfortel</h3>
-        <h3>September 2022</h3>
-      </div>
-    </div>
-    <div class="right">
-      <div class="section-header"></div>
       <div class="work-info">
         <p>
           <i>Responsibilities:</i>
@@ -56,6 +30,14 @@ const lang = ref("en");
           <i>Used skills:</i> HTML · CSS · SASS · Figma · Single Page Applications · Amazon Web Services (AWS)
           · Nginx · VueJS · Linux · Bash
         </p>
+      </div>
+
+      <!-- --------------------------- -->
+
+      <div class="work-title">
+        <h2>Fllstack Developer</h2>
+        <h3>Freelance</h3>
+        <h3>2019</h3>
       </div>
       <div class="work-info">
         <p>
@@ -68,6 +50,13 @@ const lang = ref("en");
           VueJS · NuxtJS · NodeJS · Python · TypeScript · NestJS · JavaScript · Linux · Bash
         </p>
       </div>
+      <!-- --------------------------- -->
+
+      <div class="work-title">
+        <h2>Data Engineer</h2>
+        <h3>St. Petersburg ETU "LETI"</h3>
+        <h3>2020</h3>
+      </div>
       <div class="work-info">
         <p>
           <i>Responsibilities:</i> Create datasets from logs raw data. Modify datasets by adding new metrics.
@@ -79,11 +68,27 @@ const lang = ref("en");
           Statistics · Scientific research
         </p>
       </div>
+
+      <!-- --------------------------- -->
+
+      <div class="work-title">
+        <h2>Web Developer</h2>
+        <h3>ProCSy</h3>
+        <h3>March 2022</h3>
+      </div>
       <div class="work-info">
         <p><i>Responsibilities: </i> Design and development of a fintech web application. Testing.</p>
         <p>
           <i>Used skills:</i> Javascript · TypeScript · Jest · NestJS · NuxtJS · VueJS · Vuex · Axios · Figma
         </p>
+      </div>
+
+      <!-- --------------------------- -->
+
+      <div class="work-title">
+        <h2>QA Engineer</h2>
+        <h3>ProCSy</h3>
+        <h3>June 2022</h3>
       </div>
       <div class="work-info">
         <p>
@@ -91,6 +96,14 @@ const lang = ref("en");
           and integration tests.
         </p>
         <p><i>Used skills:</i> JavaScript · Jest · E2E Tests · Integration tests</p>
+      </div>
+
+      <!-- --------------------------- -->
+
+      <div class="work-title">
+        <h2>Backend Engineer</h2>
+        <h3>Comfortel</h3>
+        <h3>September 2022</h3>
       </div>
       <div class="work-info">
         <p>
@@ -111,8 +124,15 @@ const lang = ref("en");
 #experience {
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 100vw;
   color: var(--text);
+  padding: 100px 0;
+
+  .section-header {
+    margin-bottom: 50px;
+  }
+
   .wave {
     position: absolute;
     top: 0;
@@ -134,28 +154,17 @@ const lang = ref("en");
     }
   }
 
-  .left,
-  .right {
-    width: 50%;
-    .section-header {
-      z-index: 1;
-      height: 200px;
-    }
-  }
-  .left {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 200px 100px;
-    align-items: end;
-
+  .experience_content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 50px;
     .work-title {
       display: flex;
       flex-direction: column;
       justify-content: start;
       align-items: end;
-      height: 200px;
-      margin: 10px 0;
+      // height: 200px;
+      // margin: 10px 0;
 
       h2 {
         color: var(--accent);
@@ -166,26 +175,15 @@ const lang = ref("en");
       }
     }
   }
-  .right {
-    background: var(--text);
+
+  .work-info {
     display: flex;
     flex-direction: column;
-    padding: 200px 100px;
-    color: var(--bg);
-
-    .work-info {
-      display: flex;
-      width: 70%;
-      flex-direction: column;
-      justify-content: start;
-      align-items: start;
-      height: 200px;
-      margin: 10px 0;
-      box-sizing: border-box;
-      padding: 10px 0;
-      p {
-        margin-bottom: 10px;
-      }
+    justify-content: start;
+    box-sizing: border-box;
+    p {
+      margin-bottom: 10px;
+      padding-right: 100px;
     }
   }
 }
@@ -193,6 +191,14 @@ const lang = ref("en");
 /* Min-width: 320px (smaller phone viewpoints) */
 @media only screen and (max-width: 320px) {
   #experience {
+    .experience_content {
+      display: flex;
+      flex-direction: column;
+      .work-title {
+        align-items: start;
+      }
+    }
+
     h2 {
       font-size: 1.2em;
     }
@@ -201,21 +207,21 @@ const lang = ref("en");
       width: 100%;
       font-size: 1em;
     }
-
-    .left,
-    .right {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      p {
-        width: 100%;
-      }
-    }
   }
 }
 /* Min-width: 320px (smaller phone viewpoints) */
 @media only screen and (max-width: 1200px) {
   #experience {
+    .experience_content {
+      display: flex;
+      flex-direction: column;
+      .work-title {
+        align-items: start;
+        width: 100%;
+        padding: 0.5em 2em;
+      }
+    }
+
     h2 {
       font-size: 1.5em;
     }
@@ -224,38 +230,13 @@ const lang = ref("en");
       font-size: 1em;
     }
 
-    .left,
-    .right {
+    .work-info {
       width: 100%;
-      position: absolute;
-      background: transparent;
-      padding: 0 10%;
-
-      .section-header {
-        align-self: start;
-      }
-
-      .work-title {
-        height: 110px;
-        margin-bottom: 340px;
-        background: rgba(0, 0, 0, 0.3);
-        padding: 0.5em 1em;
-        border-radius: 7px;
-        backdrop-filter: blur(10px);
-      }
-
-      .work-info {
-        width: 100%;
-        height: 320px;
-        margin-top: 130px;
-        background: rgba(0, 0, 0, 0.3);
-        padding: 1em;
-        border-radius: 7px;
-        backdrop-filter: blur(10px);
-        p {
-          text-align: justify;
-          color: var(--text);
-        }
+      padding: 0 2em;
+      p {
+        text-align: justify;
+        color: var(--text);
+        padding: 0;
       }
     }
   }
@@ -276,6 +257,10 @@ const lang = ref("en");
 /* Min-width: 768px (most tablets) */
 @media only screen and (min-width: 768px) {
   #experience {
+    .work-title {
+      align-items: start;
+    }
+
     h2 {
       font-size: 2em;
     }
@@ -287,6 +272,11 @@ const lang = ref("en");
   #experience {
     h2 {
       font-size: 2.5em;
+    }
+
+    .work-title {
+      font-size: 1.3em;
+      align-items: start;
     }
   }
 }
