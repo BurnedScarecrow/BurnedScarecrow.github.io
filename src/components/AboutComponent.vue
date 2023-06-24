@@ -53,7 +53,7 @@ const lang = ref("en");
           <span class="accent">I am interested in studying cluster and cloud solutions</span> for scalable
           high-performance applications. I extremely like creating software products that are wonderful both
           for a glance of users and developers.
-          <span class="accent">Let's create something togeather!</span>
+          <span class="accent">Let's create something together!</span>
         </p>
       </div>
     </div>
