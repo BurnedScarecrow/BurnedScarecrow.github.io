@@ -1,12 +1,22 @@
 <script setup>
 import { ref } from "vue";
-const lang = ref("en");
+
+const props = defineProps({
+  language: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
 <template>
   <section id="experience" class="container">
     <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fafafa" fill-opacity="1" d="M0,192L720,32L1440,160L1440,0L720,0L0,0Z"></path>
+      <path
+        fill="#fafafa"
+        fill-opacity="1"
+        d="M0,96L120,85.3C240,75,480,53,720,42.7C960,32,1200,32,1320,32L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+      ></path>
     </svg>
     <h2 class="section-header">
       Experience
@@ -22,12 +32,14 @@ const lang = ref("en");
       <div class="work-info">
         <p>
           <i>Responsibilities:</i>
-          Developing a web pages using Vue JS. Fixing bugs of the layout. Connecting frontend to backend using
-          REST API. Use the concept of a SPA to implement a selling service. Deploy web-sites to AWS.
+          Developing a web pages using Vue JS. Fixing bugs of the layout.
+          Connecting frontend to backend using REST API. Use the concept of a
+          SPA to implement a selling service. Deploy web-sites to AWS.
         </p>
         <p>
-          <i>Used skills:</i> HTML · CSS · SASS · Figma · Single Page Applications · Amazon Web Services (AWS)
-          · Nginx · VueJS · Linux · Bash
+          <i>Used skills:</i> HTML · CSS · SASS · Figma · Single Page
+          Applications · Amazon Web Services (AWS) · Nginx · VueJS · Linux ·
+          Bash
         </p>
       </div>
 
@@ -40,13 +52,15 @@ const lang = ref("en");
       </div>
       <div class="work-info">
         <p>
-          <i>Responsibilities:</i> Developing a web application on the Mongo Express Vue Node stack. Creation
-          of a server-side CRUD application. Implement SPA for selling services. Using AWS and Docker to
-          Deploy a Microservice Application.
+          <i>Responsibilities:</i> Developing a web application on the Mongo
+          Express Vue Node stack. Creation of a server-side CRUD application.
+          Implement SPA for selling services. Using AWS and Docker to Deploy a
+          Microservice Application.
         </p>
         <p>
-          <i>Used skills:</i> Express.js · Django · HTML · CSS · SASS · Docker · Figma · SPA · AWS · Nginx ·
-          VueJS · NuxtJS · NodeJS · Python · TypeScript · NestJS · JavaScript · Linux · Bash
+          <i>Used skills:</i> Express.js · Django · HTML · CSS · SASS · Docker ·
+          Figma · SPA · AWS · Nginx · VueJS · NuxtJS · NodeJS · Python ·
+          TypeScript · NestJS · JavaScript · Linux · Bash
         </p>
       </div>
       <!-- --------------------------- -->
@@ -58,13 +72,14 @@ const lang = ref("en");
       </div>
       <div class="work-info">
         <p>
-          <i>Responsibilities:</i> Create datasets from logs raw data. Modify datasets by adding new metrics.
-          Creating models for Mashine Learning (ML). Implement predictive models. Use Markov's model for user
-          actions prediction in the application.
+          <i>Responsibilities:</i> Create datasets from logs raw data. Modify
+          datasets by adding new metrics. Creating models for Mashine Learning
+          (ML). Implement predictive models. Use Markov's model for user actions
+          prediction in the application.
         </p>
         <p>
-          <i>Used skills:</i> ExpressJS · Django · ML · Python · Pandas · Catboost · SciKit Learn · Math
-          Statistics · Scientific research
+          <i>Used skills:</i> ExpressJS · Django · ML · Python · Pandas ·
+          Catboost · SciKit Learn · Math Statistics · Scientific research
         </p>
       </div>
 
@@ -76,9 +91,13 @@ const lang = ref("en");
         <h3>March 2022</h3>
       </div>
       <div class="work-info">
-        <p><i>Responsibilities: </i> Design and development of a fintech web application. Testing.</p>
         <p>
-          <i>Used skills:</i> Javascript · TypeScript · Jest · NestJS · NuxtJS · VueJS · Vuex · Axios · Figma
+          <i>Responsibilities: </i> Design and development of a fintech web
+          application. Testing.
+        </p>
+        <p>
+          <i>Used skills:</i> Javascript · TypeScript · Jest · NestJS · NuxtJS ·
+          VueJS · Vuex · Axios · Figma
         </p>
       </div>
 
@@ -91,10 +110,12 @@ const lang = ref("en");
       </div>
       <div class="work-info">
         <p>
-          <i>Responsibilities:</i> Testing high performance crypto-network for transactions. Write E2E tests
-          and integration tests.
+          <i>Responsibilities:</i> Testing high performance crypto-network for
+          transactions. Write E2E tests and integration tests.
         </p>
-        <p><i>Used skills:</i> JavaScript · Jest · E2E Tests · Integration tests</p>
+        <p>
+          <i>Used skills:</i> JavaScript · Jest · E2E Tests · Integration tests
+        </p>
       </div>
 
       <!-- --------------------------- -->
@@ -106,13 +127,45 @@ const lang = ref("en");
       </div>
       <div class="work-info">
         <p>
-          <i>Responsibilities:</i> Backend engineer with speciality in restfull APIs, network security and
-          backend development. Implementing and testing server side part of smart home and IoT management
-          application. Implementing microservice architecture with Nest.js, Kafka, HTTP and MQTT.
+          <i>Responsibilities:</i> Backend engineer with speciality in restfull
+          APIs, network security and backend development. Implementing and
+          testing server side part of smart home and IoT management application.
+          Implementing microservice architecture with Nest.js, Kafka, HTTP and
+          MQTT.
         </p>
         <p>
-          <i>Used skills:</i> IoT · Smart Home · Jenkins · NodeJS · Python · Apache Kafka · TypeScript · Jest
-          · MongoDB · Open API · Microservices · MQTT · NestJS · Network Security
+          <i>Used skills:</i> IoT · Smart Home · Jenkins · NodeJS · Python ·
+          Apache Kafka · TypeScript · Jest · MongoDB · Open API · Microservices
+          · MQTT · NestJS · Network Security
+        </p>
+      </div>
+
+      <!-- --------------------------- -->
+
+      <div class="work-title">
+        <h2>Leed Backend Developer</h2>
+        <h3>T. Hunter</h3>
+        <h3>June 2023</h3>
+      </div>
+      <div class="work-info">
+        <p v-show="props.language == 'en'">
+          <i>Responsibilities:</i> Overseeing the design, development, and
+          maintenance of the server-side logic, databases, and APIs of web
+          applications. I also provided technical guidance, mentorship to the
+          backend development team, and ensured the scalability, performance,
+          and security of the backend systems.
+        </p>
+        <p v-show="props.language == 'ru'">
+          <i>Обязанности:</i> Контроль за проектированием, разработкой и
+          поддержкой серверной логики, баз данных и API веб-приложений. Также я
+          предоставлял техническое руководство, наставничество команде
+          разработчиков и обеспечивал масштабируемость, производительность и
+          безопасность серверной части.
+        </p>
+        <p>
+          <i>Used skills:</i> TypeScript · OSINT · NestJS · Python · RabbitMQ ·
+          PostgrSQL · Docker · Open API · Microservices · Golang · Alhorithms ·
+          Information Security · Leadership · GitLab
         </p>
       </div>
     </div>

@@ -1,6 +1,18 @@
 <script setup>
-import { ref } from "vue";
-const lang = ref("en");
+import { defineProps, defineEmits, ref } from "vue";
+
+const props = defineProps({
+  language: {
+    type: String,
+    required: true,
+  },
+});
+
+const emit = defineEmits(["languageChanged"]);
+
+const changeLanguage = () => {
+  emit("languageChanged");
+};
 </script>
 
 <template>
@@ -8,52 +20,72 @@ const lang = ref("en");
     <div class="container">
       <h2 class="section-header">
         About me
-        <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span>
+        <span class="lang" @click="changeLanguage">{{
+          props.language == "ru" ? "en" : "ru"
+        }}</span>
       </h2>
       <div class="space"></div>
       <div class="section-content">
-        <p v-show="lang == 'ru'">
-          Как разработчик с <span class="accent">3-летним профессиональным опытом</span>, я увлечен
-          разработкой иновационных решений современных проблем. Последние 5 лет обучения стали для меня
-          прекрасной возможностью попробовать себя в различных сферах IT, включая как популярыне
-          <span class="accent">Backend и Frontend</span>, так и специфичные, например информационная
-          безопасность и реверс-инжиниринг.
+        <p v-show="props.language == 'ru'">
+          <span class="accent">С 2020 года</span> я профессионально занимаюсь
+          разработкой программного обеспечения и в настоящее время работаю
+          <span class="accent">ведущим инженером-программистом</span>,
+          специализируясь на разработке и поддержке бэкенда. Мой опыт охватывает
+          <span class="accent"
+            >различные аспекты IT, включая фронтенд, бэкенд</span
+          >, информационную безопасность, реверс-инжиниринг и машинное обучение.
         </p>
 
-        <p v-show="lang == 'ru'">
-          Сейчас я <span class="accent">работаю над дипломной работой</span> о методах обхода блокировок
-          интернет-ресурсов и интернет-цензуры путем проксирования, туннелирования и обфускации трафика, так
-          как
-          <span class="accent">я за свободу в интернете.</span>
+        <p v-show="props.language == 'ru'">
+          Недавно я завершил обучение и успешно
+          <span class="accent">защитил дипломную работу</span> по специальности
+          "Информационная безопасность", в которой исследовал
+          <span class="accent"
+            >методы обхода блокировок интернет-ресурсов и интернет-цензуры</span
+          >
+          с использованием проксирования, туннелирования и обфускации трафика.
+          Это исследование подчеркнуло мою
+          <span class="accent">приверженность свободе интернета.</span>
         </p>
-        <p v-show="lang == 'ru'">
-          В своей карьере <span class="accent">я стремлюсь улучшить свои технические навыки</span> в области
-          серверной разработки, проектирования программного обеспечения, тестирования и внедрения надежных и
-          безопасных систем. На данный момент я
-          <span class="accent">заинтересован в изучении кластерных и облачных решений</span> для
-          масштабируемых высокопроизводительных приложений. Мне очень нравится создавать программные продукты,
-          которые прекрасны как на взгляд пользователей, так и разработчиков.
-          <span class="accent">Давайте создадим что-нибудь вместе!</span>
+        <p v-show="props.language == 'ru'">
+          В своей карьере я стремлюсь совершенствовать навыки в разработке
+          программного обеспечения,
+          <span class="accent"
+            >проектировании систем и создании масштабируемых
+            высокопроизводительных приложений</span
+          >. Мне нравится разрабатывать программные продукты, которые радуют как
+          пользователей, так и разработчиков.
+          <span class="accent"
+            >Давайте создадим что-то удивительное вместе!</span
+          >
         </p>
-        <p v-show="lang == 'en'">
-          As a software engineer with <span class="accent">3 years of professional experience</span>, I am
-          passionate about developing innovative solutions that solve complex problems. Last 5 years of
-          studying have become for me a great opportunity to try myself in lots of fields of IT including
-          popular <span class="accent">Backend and Frontend</span>, and specific like information security and
-          reverse engineering.
+        <p v-show="props.language == 'en'">
+          <span class="accent">Since 2020,</span> I have been professionally
+          engaged in software development and currently work as a
+          <span class="accent">lead software engineer</span>, specializing in
+          <span class="accent">backend development</span> and support. My
+          <span class="accent">experience covers various aspects of IT,</span>
+          including frontend, backend, information security, reverse
+          engineering, and machine learning.
         </p>
-        <p v-show="lang == 'en'">
-          Nowadays I am <span class="accent">working on my graduation work</span> about methods for bypassing
-          blocking of Internet resources and Internet censorship by traffic proxying, tunneling and
-          obfuscation, as <span class="accent">I am for freedom in the internet.</span>
+        <p v-show="props.language == 'en'">
+          Recently, I completed my studies and successfully
+          <span class="accent">defended my thesis</span>
+          in "Information Security," in which I investigated methods for
+          <span class="accent"
+            >bypassing internet resource blocks and censorship</span
+          >
+          using proxying, tunneling, and traffic obfuscation. This research
+          underscored my
+          <span class="accent">commitment to internet freedom.</span>
         </p>
-        <p v-show="lang == 'en'">
-          In my career I am <span class="accent">looking to enhance my technical skills</span> in backend,
-          software design, testing and implementing reliable and secure systems. For now,
-          <span class="accent">I am interested in studying cluster and cloud solutions</span> for scalable
-          high-performance applications. I extremely like creating software products that are wonderful both
-          for a glance of users and developers.
-          <span class="accent">Let's create something together!</span>
+        <p v-show="props.language == 'en'">
+          In my career, I strive to enhance my skills in software development,
+          system design, and the creation of
+          <span class="accent">scalable high-performance applications</span>. I
+          enjoy developing software products that delight both users and
+          developers.
+          <span class="accent">Let's create something amazing together!</span>
         </p>
       </div>
     </div>
