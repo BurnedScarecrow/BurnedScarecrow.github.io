@@ -21,7 +21,6 @@ const displayLanguage = computed(() => (lang.value === "ru" ? "en" : "ru"));
   <div id="app">
     <TopLine></TopLine>
     <HomeComponent></HomeComponent>
-    <h2 align="center" @click="toggleLanguage">{{ displayLanguage }}</h2>
     <AboutComponent
       :language="lang"
       @languageChanged="toggleLanguage"

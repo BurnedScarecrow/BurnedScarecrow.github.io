@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from "vue";
 
 const props = defineProps({
   language: {
@@ -18,120 +17,65 @@ const props = defineProps({
         d="M0,96L120,85.3C240,75,480,53,720,42.7C960,32,1200,32,1320,32L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
       ></path>
     </svg>
-    <h2 class="section-header">
-      Experience
-      <!-- <span class="lang" @click="lang = lang == 'ru' ? 'en' : 'ru'">{{ lang == "ru" ? "en" : "ru" }}</span> -->
-    </h2>
+    <h2 class="section-header">Experience</h2>
 
     <div class="experience_content">
+      <!-- Lead Backend Developer -->
       <div class="work-title">
-        <h2>Frontend Developer</h2>
-        <h3>Freelance</h3>
-        <h3>2018</h3>
+        <h2>Lead Backend Developer</h2>
+        <h3>T. Hunter</h3>
+        <h3>June 2023</h3>
       </div>
       <div class="work-info">
-        <p>
-          <i>Responsibilities:</i>
-          Developing a web pages using Vue JS. Fixing bugs of the layout.
-          Connecting frontend to backend using REST API. Use the concept of a
-          SPA to implement a selling service. Deploy web-sites to AWS.
+        <p v-show="props.language == 'en'">
+          <i>Responsibilities:</i> 
+          <ul>
+            <li>Design, development, and maintenance of server-side logic, databases, and APIs for web applications.</li>
+            <li>Providing technical guidance and mentorship to the backend development team.</li>
+            <li>Ensuring scalability, performance, and security of backend systems.</li>
+          </ul>
+        </p>
+        <p v-show="props.language == 'ru'">
+          <i>Обязанности:</i> 
+          <ul>
+            <li>Проектирование, разработка и обслуживание логики серверной части, баз данных и API для веб-приложений.</li>
+            <li>Предоставление технического руководства и наставничества команде разработчиков backend.</li>
+            <li>Обеспечение масштабируемости, производительности и безопасности серверных систем.</li>
+          </ul>
         </p>
         <p>
-          <i>Used skills:</i> HTML · CSS · SASS · Figma · Single Page
-          Applications · Amazon Web Services (AWS) · Nginx · VueJS · Linux ·
-          Bash
-        </p>
-      </div>
-
-      <!-- --------------------------- -->
-
-      <div class="work-title">
-        <h2>Fllstack Developer</h2>
-        <h3>Freelance</h3>
-        <h3>2019</h3>
-      </div>
-      <div class="work-info">
-        <p>
-          <i>Responsibilities:</i> Developing a web application on the Mongo
-          Express Vue Node stack. Creation of a server-side CRUD application.
-          Implement SPA for selling services. Using AWS and Docker to Deploy a
-          Microservice Application.
-        </p>
-        <p>
-          <i>Used skills:</i> Express.js · Django · HTML · CSS · SASS · Docker ·
-          Figma · SPA · AWS · Nginx · VueJS · NuxtJS · NodeJS · Python ·
-          TypeScript · NestJS · JavaScript · Linux · Bash
-        </p>
-      </div>
-      <!-- --------------------------- -->
-
-      <div class="work-title">
-        <h2>Data Engineer</h2>
-        <h3>St. Petersburg ETU "LETI"</h3>
-        <h3>2020</h3>
-      </div>
-      <div class="work-info">
-        <p>
-          <i>Responsibilities:</i> Create datasets from logs raw data. Modify
-          datasets by adding new metrics. Creating models for Mashine Learning
-          (ML). Implement predictive models. Use Markov's model for user actions
-          prediction in the application.
-        </p>
-        <p>
-          <i>Used skills:</i> ExpressJS · Django · ML · Python · Pandas ·
-          Catboost · SciKit Learn · Math Statistics · Scientific research
+          <i>Used skills:</i> TypeScript · OSINT · NestJS · Python · RabbitMQ ·
+          PostgrSQL · Docker · Open API · Microservices · Golang · Alhorithms ·
+          Information Security · Leadership · GitLab
         </p>
       </div>
 
-      <!-- --------------------------- -->
-
-      <div class="work-title">
-        <h2>Web Developer</h2>
-        <h3>ProCSy</h3>
-        <h3>March 2022</h3>
-      </div>
-      <div class="work-info">
-        <p>
-          <i>Responsibilities: </i> Design and development of a fintech web
-          application. Testing.
-        </p>
-        <p>
-          <i>Used skills:</i> Javascript · TypeScript · Jest · NestJS · NuxtJS ·
-          VueJS · Vuex · Axios · Figma
-        </p>
-      </div>
-
-      <!-- --------------------------- -->
-
-      <div class="work-title">
-        <h2>QA Engineer</h2>
-        <h3>ProCSy</h3>
-        <h3>June 2022</h3>
-      </div>
-      <div class="work-info">
-        <p>
-          <i>Responsibilities:</i> Testing high performance crypto-network for
-          transactions. Write E2E tests and integration tests.
-        </p>
-        <p>
-          <i>Used skills:</i> JavaScript · Jest · E2E Tests · Integration tests
-        </p>
-      </div>
-
-      <!-- --------------------------- -->
-
+      <!-- Backend Engineer -->
       <div class="work-title">
         <h2>Backend Engineer</h2>
         <h3>Comfortel</h3>
         <h3>September 2022</h3>
       </div>
       <div class="work-info">
-        <p>
-          <i>Responsibilities:</i> Backend engineer with speciality in restfull
-          APIs, network security and backend development. Implementing and
-          testing server side part of smart home and IoT management application.
-          Implementing microservice architecture with Nest.js, Kafka, HTTP and
-          MQTT.
+        <p v-show="props.language == 'en'">
+          <i>Responsibilities:</i> 
+          <ul>
+            <li>Designing and implementing RESTful APIs.</li>
+            <li>Ensuring network security measures are in place.</li>
+            <li>Developing backend systems for smart home and IoT management applications.</li>
+            <li>Testing server-side components thoroughly.</li>
+            <li>Utilizing microservice architecture with Nest.js, Kafka, HTTP, and MQTT.</li>
+          </ul>
+        </p>
+        <p v-show="props.language == 'ru'">
+          <i>Обязанности:</i> 
+          <ul>
+            <li>Проектирование и реализация RESTful API.</li>
+            <li>Обеспечение безопасности сети.</li>
+            <li>Разработка серверных систем для управления умным домом и Интернетом вещей.</li>
+            <li>Тщательное тестирование серверных компонентов.</li>
+            <li>Использование микросервисной архитектуры с помощью Nest.js, Kafka, HTTP и MQTT.</li>
+          </ul>
         </p>
         <p>
           <i>Used skills:</i> IoT · Smart Home · Jenkins · NodeJS · Python ·
@@ -140,32 +84,163 @@ const props = defineProps({
         </p>
       </div>
 
-      <!-- --------------------------- -->
-
+      <!-- QA Engineer -->
       <div class="work-title">
-        <h2>Leed Backend Developer</h2>
-        <h3>T. Hunter</h3>
-        <h3>June 2023</h3>
+        <h2>QA Engineer</h2>
+        <h3>ProCSy</h3>
+        <h3>June 2022</h3>
       </div>
       <div class="work-info">
         <p v-show="props.language == 'en'">
-          <i>Responsibilities:</i> Overseeing the design, development, and
-          maintenance of the server-side logic, databases, and APIs of web
-          applications. I also provided technical guidance, mentorship to the
-          backend development team, and ensured the scalability, performance,
-          and security of the backend systems.
+          <i>Responsibilities:</i> 
+          <ul>
+            <li>Functional testing of smart contracts and their compliance with stated requirements.</li>
+            <li>E2E and integration testing of the blockchain system.</li>
+            <li>Security audit, including vulnerability assessment, penetration testing.</li>
+            <li>Performance evaluation of the network and its scalability under increasing load or data volume.</li>
+          </ul>
         </p>
         <p v-show="props.language == 'ru'">
-          <i>Обязанности:</i> Контроль за проектированием, разработкой и
-          поддержкой серверной логики, баз данных и API веб-приложений. Также я
-          предоставлял техническое руководство, наставничество команде
-          разработчиков и обеспечивал масштабируемость, производительность и
-          безопасность серверной части.
+          <i>Обязанности:</i> 
+          <ul>
+            <li>Функциональное тестирование работы смарт-контрактов и их соответствия заявленным требованиям.</li>
+            <li>E2E и интеграционное тестирование блокчейн системы.</li>
+            <li>Аудит безопасности, включая исследование на уязвимости, тестирование на проникновение.</li>
+            <li>Оценка производительности сети и ее способности масштабироваться при увеличении нагрузки или объема данных.</li>
+          </ul>
         </p>
         <p>
-          <i>Used skills:</i> TypeScript · OSINT · NestJS · Python · RabbitMQ ·
-          PostgrSQL · Docker · Open API · Microservices · Golang · Alhorithms ·
-          Information Security · Leadership · GitLab
+          <i>Used skills:</i> JavaScript · Jest · E2E Tests · Integration tests · Penetration tests · Blockchain
+        </p>
+      </div>
+
+      <!-- Web Developer -->
+      <div class="work-title">
+        <h2>Web Developer</h2>
+        <h3>ProCSy</h3>
+        <h3>March 2022</h3>
+      </div>
+      <div class="work-info">
+        <p v-show="props.language == 'en'">
+          <i>Responsibilities: </i> 
+          <ul>
+            <li>Design and development of web applications for fintech.</li>
+            <li>Implementation of frontend functionality </li>
+            <li>Integration of backend services and APIs to support currency exchange and cryptocurrency transactions.</li>
+            <li>Conducting thorough testing, including unit, integration and E2E testing.</li>
+          </ul>
+        </p>
+        <p v-show="props.language == 'ru'">
+          <i>Обязанности:</i> 
+          <ul>
+            <li>Дизайн и разработка веб-приложения для финтеха.</li>
+            <li>Реализация функциональности фронтенда </li>
+            <li>Интеграция бэкенд-сервисов и API для поддержки обмена валюты и транзакций с криптовалютой.</li>
+            <li>Проведение тщательного тестирования, включая модульное, интеграционное и E2E тестирование.</li>
+          </ul>
+        </p>
+        <p>
+          <i>Used skills:</i> Javascript · TypeScript · Jest · NestJS · NuxtJS ·
+          VueJS · Vuex · Axios · Figma
+        </p>
+      </div>
+
+      <!-- Data Engineer -->
+      <div class="work-title">
+        <h2>Data Engineer</h2>
+        <h3>St. Petersburg ETU "LETI"</h3>
+        <h3>2020</h3>
+      </div>
+      <div class="work-info">
+        <p v-show="props.language == 'en'">
+          <i>Responsibilities:</i> 
+          <ul>
+            <li>Create datasets from raw mobile app logs.</li>
+            <li>Modify datasets by adding new metrics.</li>
+            <li>Creating models for Mashine Learning.</li>
+            <li>Research and implementation of predictive models.</li>
+            <li>Use Markov's model for user actions prediction in the application.</li>
+          </ul>
+        </p>
+        <p v-show="props.language == 'ru'">
+          <i>Обязанности:</i> 
+          <ul>
+            <li>Создание датасетов на основе необработанных данных из логов мобильного приложения.</li>
+            <li>Обработка датасетов, добавление новых метрик.</li>
+            <li>Создание моделей для машинного обучения.</li>
+            <li>Исследование прогнозирующих моделей.</li>
+            <li>Использование модели Маркова для прогнозирования действий пользователя в приложении.</li>
+          </ul>
+        </p>
+        <p>
+          <i>Used skills:</i> ExpressJS · Django · Flask · ML · Python · Pandas ·
+          Catboost · SciKit Learn · Math Statistics · Scientific research
+        </p>
+      </div>
+
+      <!-- Fullstack Developer -->
+      <div class="work-title">
+        <h2>Fullstack Developer</h2>
+        <h3>Freelance</h3>
+        <h3>2019</h3>
+      </div>
+      <div class="work-info">
+        <p v-show="props.language == 'en'">
+          <i>Responsibilities:</i> 
+          <ul>
+            <li>Developing a web application on the Mongo Express Vue Node stack.</li>
+            <li>Creation of a server-side CRUD applicationы.</li>
+            <li>Implementing SPA for selling services.</li>
+            <li>Using AWS and Docker to deploy a microservice applications.</li>
+          </ul>
+        </p>
+        <p v-show="props.language == 'ru'">
+          <i>Обязанности:</i> 
+          <ul>
+            <li>Разработка веб-приложений на стеке Mongo Express Vue Node.</li>
+            <li>Создание серверноых CRUD-приложений.</li>
+            <li>Реализация SPA для продажи услуг.</li>
+            <li>Использование AWS и Docker для развертывания микросервисноых систем.</li>
+          </ul>
+        </p>
+        <p>
+          <i>Used skills:</i> Express.js · Django · HTML · CSS · SASS · Docker ·
+          Figma · SPA · AWS · Nginx · VueJS · NuxtJS · NodeJS · Python ·
+          TypeScript · NestJS · JavaScript · Linux · Bash
+        </p>
+      </div>
+
+      <!-- Frontend Developer -->
+      <div class="work-title">
+        <h2>Frontend Developer</h2>
+        <h3>Freelance</h3>
+        <h3>2018</h3>
+      </div>
+      <div class="work-info">
+        <p v-show="props.language == 'en'">
+          <i>Responsibilities:</i>
+          <ul>
+            <li>Developing web pages using Vue JS.</li>
+            <li>Fixing bugs in the layout.</li>
+            <li>Connecting frontend to backend using REST API.</li>
+            <li>Using the concept of a SPA to implement a selling service.</li>
+            <li>Deploying websites to AWS.</li>
+          </ul>
+        </p>
+        <p v-show="props.language == 'ru'">
+          <i>Обязанности:</i>
+          <ul>
+            <li>Разработка веб-страниц с использованием Vue JS.</li>
+            <li>Исправление ошибок в макете.</li>
+            <li>Подключение фронтенда к бэкенду с использованием REST API.</li>
+            <li>Использование концепции SPA для реализации сервиса продажи.</li>
+            <li>Развертывание веб-сайтов на AWS.</li>
+          </ul>
+        </p>
+        <p>
+          <i>Used skills:</i> HTML · CSS · SASS · Figma · Single Page
+          Applications · Amazon Web Services (AWS) · Nginx · VueJS · Linux ·
+          Bash
         </p>
       </div>
     </div>
@@ -208,8 +283,17 @@ const props = defineProps({
   p {
     font-family: "Jost";
     font-size: 1.2em;
+
     i {
       font-family: "Jura";
+    }
+
+    ul
+    {
+      li{
+        list-style: inside;
+        list-style-type: circle;
+      }
     }
   }
 
