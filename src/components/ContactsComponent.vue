@@ -1,3 +1,11 @@
+<script setup>
+import { computed, ref } from "vue";
+
+const date = ref("date");
+
+date.value = new Date().getFullYear();
+</script>
+
 <template>
   <section id="contacts">
     <div class="container">
@@ -8,15 +16,23 @@
       <div class="contacts-section">
         <div class="ref">
           <img src="../assets/github-mark.svg" alt="" />
-          <a href="https://github.com/BurnedScarecrow" target="_blank"> BurnedScarecrow </a>
+          <a href="https://github.com/BurnedScarecrow" target="_blank">
+            BurnedScarecrow
+          </a>
         </div>
         <div class="ref">
           <img src="../assets/email.png" alt="" />
-          <a href="mailto:evsik.sasha@gmail.com" target="_blank"> evsik.sasha@gmail.com </a>
+          <a href="mailto:evsik.sasha@gmail.com" target="_blank">
+            evsik.sasha@gmail.com
+          </a>
+        </div>
+        <div class="ref">
+          <img src="../assets/linkedin.png" alt="" />
+          <a href="https://www.linkedin.com/in/cawa/" target="_blank"> cawa </a>
         </div>
       </div>
       <div class="space"></div>
-      <footer>Alexander Evsikov &copy; 2023</footer>
+      <footer>Alexander Evsikov &copy; {{ date }}</footer>
     </div>
   </section>
 </template>
@@ -29,6 +45,7 @@
   width: 100vw;
   color: var(--bg);
   padding-bottom: 50px;
+  margin-top: -2px;
 
   footer {
     text-align: center;

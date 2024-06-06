@@ -149,32 +149,30 @@ const props = defineProps({
       <div class="work-title">
         <h2>Data Engineer</h2>
         <h3>St. Petersburg ETU "LETI"</h3>
-        <h3>2020</h3>
+        <h3>May 2020</h3>
       </div>
       <div class="work-info">
         <p v-show="props.language == 'en'">
           <i>Responsibilities:</i> 
           <ul>
-            <li>Create datasets from raw mobile app logs.</li>
-            <li>Modify datasets by adding new metrics.</li>
-            <li>Creating models for Mashine Learning.</li>
-            <li>Research and implementation of predictive models.</li>
-            <li>Use Markov's model for user actions prediction in the application.</li>
+            <li>Creating datasets from raw mobile app logs.</li>
+            <li>Creating models for Machine Learning.</li>
+            <li>Research and implementation of predictive models (Markov's chain).</li>
+            <li>Working on a software searching for plagiarism in the source code, based on AST metadata analysis.</li>
           </ul>
         </p>
         <p v-show="props.language == 'ru'">
           <i>Обязанности:</i> 
           <ul>
             <li>Создание датасетов на основе необработанных данных из логов мобильного приложения.</li>
-            <li>Обработка датасетов, добавление новых метрик.</li>
             <li>Создание моделей для машинного обучения.</li>
-            <li>Исследование прогнозирующих моделей.</li>
-            <li>Использование модели Маркова для прогнозирования действий пользователя в приложении.</li>
+            <li>Исследование и разработка прогнозирующих моделей (цепь Маркова).</li>
+            <li>Работа над программным обеспечением для поиска плагиата в исходном коде на основе анализа метаданных AST.</li>
           </ul>
         </p>
         <p>
           <i>Used skills:</i> ExpressJS · Django · Flask · ML · Python · Pandas ·
-          Catboost · SciKit Learn · Math Statistics · Scientific research
+          Catboost · SciKit Learn · Math Statistics · Scientific research · С++
         </p>
       </div>
 
@@ -191,7 +189,7 @@ const props = defineProps({
             <li>Developing a web application on the Mongo Express Vue Node stack.</li>
             <li>Creation of a server-side CRUD applicationы.</li>
             <li>Implementing SPA for selling services.</li>
-            <li>Using AWS and Docker to deploy a microservice applications.</li>
+            <li>Using AWS and Docker to deploy icroservice applications.</li>
           </ul>
         </p>
         <p v-show="props.language == 'ru'">
@@ -261,7 +259,8 @@ const props = defineProps({
   flex-direction: column;
   width: 100vw;
   color: var(--text);
-  padding: 100px 0;
+  padding: 0 10px;
+  padding: 150px 0 50px 0;
 
   .section-header {
     margin-bottom: 50px;
@@ -269,6 +268,8 @@ const props = defineProps({
 
   .wave {
     position: absolute;
+    // padding: 0; 
+    // margin: 0;
     top: 0;
   }
 

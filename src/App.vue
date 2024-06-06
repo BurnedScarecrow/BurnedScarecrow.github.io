@@ -13,8 +13,6 @@ const lang = ref("en");
 const toggleLanguage = () => {
   lang.value = lang.value === "ru" ? "en" : "ru";
 };
-
-const displayLanguage = computed(() => (lang.value === "ru" ? "en" : "ru"));
 </script>
 
 <template>

@@ -33,7 +33,8 @@ const changeLanguage = () => {
           специализируясь на разработке и поддержке бэкенда. Мой опыт охватывает
           <span class="accent"
             >различные аспекты IT, включая фронтенд, бэкенд</span
-          >, информационную безопасность, реверс-инжиниринг и машинное обучение.
+          >, информационную безопасность, реверс-инжиниринг, машинное обучение и
+          другие.
         </p>
 
         <p v-show="props.language == 'ru'">
@@ -66,7 +67,7 @@ const changeLanguage = () => {
           <span class="accent">backend development</span> and support. My
           <span class="accent">experience covers various aspects of IT,</span>
           including frontend, backend, information security, reverse
-          engineering, and machine learning.
+          engineering, machine learning and others.
         </p>
         <p v-show="props.language == 'en'">
           Recently, I completed my studies and successfully

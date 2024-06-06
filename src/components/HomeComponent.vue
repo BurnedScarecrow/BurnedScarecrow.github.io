@@ -28,7 +28,8 @@ const count = ref(0);
       <h2>Download Resume</h2>
       <div class="resume_buttons">
         <a
-          href="https://github.com/BurnedScarecrow/BurnedScarecrow.github.io/raw/main/Resume-Alexander-Evsikov-ru.pdf"
+          target="_blank"
+          href="https://docs.google.com/document/d/1o_00NzIzkpIywN7IrS0OAUrYvTT5Z897/edit?usp=sharing&ouid=101835888985607078601&rtpof=true&sd=true"
         >
           <h2>
             <img src="../assets/download-svgrepo-com.svg" alt="" />
@@ -36,7 +37,8 @@ const count = ref(0);
           </h2>
         </a>
         <a
-          href="https://github.com/BurnedScarecrow/BurnedScarecrow.github.io/raw/main/Resume-Alexander-Evsikov-en.pdf"
+          target="_blank"
+          href="https://docs.google.com/document/d/1YOcqXEYSUgrixkD6sM2guYj7lybrOpr_/edit?usp=sharing&ouid=101835888985607078601&rtpof=true&sd=true"
         >
           <h2>
             <img src="../assets/download-svgrepo-com.svg" alt="" />
