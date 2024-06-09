@@ -289,10 +289,8 @@ const props = defineProps({
       font-family: "Jura";
     }
 
-    ul
-    {
+    ul {
       li{
-        list-style: inside;
         list-style-type: circle;
       }
     }
@@ -307,9 +305,7 @@ const props = defineProps({
       flex-direction: column;
       justify-content: start;
       align-items: end;
-      // height: 200px;
-      // margin: 10px 0;
-
+    
       h2 {
         color: var(--accent);
         font: 1.5em "Jost";
