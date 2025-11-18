@@ -38,7 +38,7 @@ const count = ref(0);
         </a>
         <a
           target="_blank"
-          href="https://docs.google.com/document/d/1YOcqXEYSUgrixkD6sM2guYj7lybrOpr_/edit?usp=sharing&ouid=101835888985607078601&rtpof=true&sd=true"
+          href="https://docs.google.com/document/d/1Ucioczp_dTAwWklSJwTyMFGoB0FDFswdZpVvv-Kpq8g/edit?usp=sharing"
         >
           <h2>
             <img src="../assets/download-svgrepo-com.svg" alt="" />
