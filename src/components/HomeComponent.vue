@@ -29,7 +29,7 @@ const count = ref(0);
       <div class="resume_buttons">
         <a
           target="_blank"
-          href="https://docs.google.com/document/d/1o_00NzIzkpIywN7IrS0OAUrYvTT5Z897/edit?usp=sharing&ouid=101835888985607078601&rtpof=true&sd=true"
+          href="https://docs.google.com/document/d/1Q_AGW4ZO_o6o5Ho2QjP20LAC9yrFolVlyM7i9yh739M/edit?usp=sharing"
         >
           <h2>
             <img src="../assets/download-svgrepo-com.svg" alt="" />

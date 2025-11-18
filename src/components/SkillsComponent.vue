@@ -11,7 +11,11 @@
             <img src="../assets/js.png" alt="" />
             JavaScript
           </a>
-          <a href="https://www.typescriptlang.org/" target="_blank" class="skill">
+          <a
+            href="https://www.typescriptlang.org/"
+            target="_blank"
+            class="skill"
+          >
             <img src="../assets/ts.png" alt="" />
             TypeScript
           </a>
@@ -38,6 +42,14 @@
           <a href="https://kafka.apache.org/" target="_blank" class="skill">
             <img src="../assets/kafka.png" alt="" />
             Kafka
+          </a>
+          <a href="https://www.rabbitmq.com/" target="_blank" class="skill">
+            <img src="../assets/rabbitmq.svg" alt="" />
+            RabbitMQ
+          </a>
+          <a href="https://www.prisma.io/" target="_blank" class="skill">
+            <img src="../assets/prisma.png" alt="" />
+            Prisma
           </a>
           <div class="skill">
             <img src="../assets/bash.png" alt="" />

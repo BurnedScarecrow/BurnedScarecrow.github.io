@@ -27,6 +27,25 @@ const changeLanguage = () => {
       <div class="space"></div>
       <div class="section-content">
         <p v-show="props.language == 'ru'">
+          <span class="accent">Ведущий backend-разработчик</span> с большим
+          опытом проектирования, разработки и масштабирования серверных систем.
+        </p>
+        <p v-show="props.language == 'ru'">
+          <span class="accent"> Экспертиза в Node.js, TypeScript, NestJS</span>,
+          микросервисной архитектуре, event-driven подходе и распределённых
+          системах. Сильные навыки в
+          <span class="accent">системном дизайне</span>, повышении
+          производительности, оптимизации и техническом лидерстве.
+        </p>
+        <p v-show="props.language == 'ru'">
+          Увлечён созданием надёжных, быстрых и удобных проектов, которые
+          <span class="accent"
+            >приносят пользу пользователям и разработчикам</span
+          >.
+        </p>
+
+        <!--
+        <p v-show="props.language == 'ru'">
           <span class="accent">С 2020 года</span> я профессионально занимаюсь
           разработкой программного обеспечения и в настоящее время работаю
           <span class="accent">ведущим инженером-программистом</span>,
@@ -60,6 +79,27 @@ const changeLanguage = () => {
             >Давайте создадим что-то удивительное вместе!</span
           >
         </p>
+        -->
+
+        <p v-show="props.language == 'en'">
+          <span class="accent">Lead Backend Developer</span> with extensive
+          experience in designing, developing, and scaling backend systems.
+        </p>
+        <p v-show="props.language == 'en'">
+          Strong expertise in
+          <span class="accent">Node.js, TypeScript, NestJS</span>,
+          microservices, event-driven architecture, and distributed systems.
+          Skilled in <span class="accent">system design</span>, performance
+          optimization, and team leadership
+        </p>
+
+        <p v-show="props.language == 'en'">
+          Passionate about building
+          <span class="accent">high-performance applications</span> that delight
+          users and developers.
+        </p>
+
+        <!--
         <p v-show="props.language == 'en'">
           <span class="accent">Since 2020,</span> I have been professionally
           engaged in software development and currently work as a
@@ -88,6 +128,7 @@ const changeLanguage = () => {
           developers.
           <span class="accent">Let's create something amazing together!</span>
         </p>
+        -->
       </div>
     </div>
     <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

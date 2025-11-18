@@ -30,7 +30,9 @@ const props = defineProps({
         <p v-show="props.language == 'en'">
           <i>Responsibilities:</i> 
           <ul>
+            <li>Leading a cross-functional team of 9 people</li>
             <li>Design, development, and maintenance of server-side logic, databases, and APIs for web applications.</li>
+            <li>Design the architecture and implement key modules of projects.</li>
             <li>Providing technical guidance and mentorship to the backend development team.</li>
             <li>Ensuring scalability, performance, and security of backend systems.</li>
           </ul>
@@ -44,9 +46,9 @@ const props = defineProps({
           </ul>
         </p>
         <p>
-          <i>Used skills:</i> TypeScript · OSINT · NestJS · Python · RabbitMQ ·
-          PostgrSQL · Docker · Open API · Microservices · Golang · Alhorithms ·
-          Information Security · Leadership · GitLab
+          <i>Used skills:</i> TypeScript · NestJS · RabbitMQ · PostgrSQL · Prisma ·
+           TypeORM · Leadership · OSINT · Python · Docker · Open API · Microservices · Golang · 
+           Algorithms · Information Security · GitLab
         </p>
       </div>
 
